@@ -18,7 +18,8 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <% if (user) { %>
-            <a class="navbar-brand" href="/logout">Log Out</a>
+            <a class="navbar-item" href="/logout">Log Out</a>
+            <a class="navbar-item" href="/battle-teams">Battle Teams</a>
             <% } else { %>
             <a href="/auth/google" class="navbar-brand">LOG IN</a>
             <% } %>

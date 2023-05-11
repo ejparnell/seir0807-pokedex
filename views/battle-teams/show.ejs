@@ -1,0 +1,17 @@
+<%- include('../partials/header.ejs') %>
+
+<h3><%= battleTeam.name %></h3>
+
+<ul>
+    <% battleTeam.pokemon.forEach(function(pokemon) { %>
+        <li>
+            <a href="/pokedex/<%= pokemon.id %>">
+                <%= pokemon.name %>
+            </a>
+        </li>
+        <% }); %>
+</ul>
+
+<a href="/battle-teams/<%= battleTeam.id %>/edit">Edit</a>
+
+<%- include('../partials/footer.ejs') %>
