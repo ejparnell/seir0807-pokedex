@@ -1,15 +1,16 @@
 <%- include('../partials/header') %>
 
 <h2>Pokedex</h2>
-
-<ul>
+<div class="pokedex-container">
     <% pokemon.forEach(function(pokemon) { %>
-        <li>
-            <a href="/pokemon/<%= pokemon.name %>">
-                <%= pokemon.name %>
-            </a>
-        </li>
-        <% }); %>
-</ul>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= pokemon.name %></h5>
+                <a href="/pokemon/<%= pokemon.name %>" class="card-link">Detail Page</a>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
 
 <%- include('../partials/footer') %>

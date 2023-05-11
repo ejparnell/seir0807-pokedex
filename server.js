@@ -47,7 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/battle-teams', battleTeamsRouter)
-app.use('/pokemon', require('./routes/pokemon'))
+app.use('/pokemon', pokemonRouter)
 
 app.use(function (req, res, next) {
 	next(createError(404))
