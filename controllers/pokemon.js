@@ -1,4 +1,5 @@
 const BattleTeam = require('../models/battle-team')
+const fetch = require('node-fetch')
 
 function show(req, res, next) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${req.params.name}`)

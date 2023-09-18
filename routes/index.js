@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport')
+const fetch = require('node-fetch')
 
 router.get('/', function(req, res, next) {
   fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
